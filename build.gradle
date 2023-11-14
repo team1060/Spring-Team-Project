@@ -42,6 +42,9 @@ dependencies {
     implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
     implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
     implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    
+    //jsoup 의존성 추가
+	implementation 'org.jsoup:jsoup:1.15.3'
 }
 
 tasks.named('bootBuildImage') {

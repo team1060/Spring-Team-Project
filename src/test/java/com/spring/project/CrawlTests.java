@@ -80,7 +80,7 @@ public static void main(String[] args) throws Exception{
                 }
                 
                 bos.close(); // 파일 닫기
-                bis.close(); // 스트림 닫기
+                bis.close(); // 스트림 닫기   
                 
                 System.out.println("파일 다운로드");
 				
