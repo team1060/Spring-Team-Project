@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 
 public interface CrawlMapper {
-	
+	 
 	@Insert("insert into tbl_crawl(name, price, detail, img) values(#{name}, #{price}, #{detail}, #{img})")
 	void insert(Map<String, Object> crawl);
 

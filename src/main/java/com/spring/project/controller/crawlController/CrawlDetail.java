@@ -24,7 +24,7 @@ public static void main(String[] args) throws Exception{
 		Document doc = conn.get();
 		Elements els = doc.select("div.contain");
 //		System.out.println(els);
-
+ 
 		id = els.select("div.o-product-information").attr("data-component-id");
 		name = els.select("h1.a-paragraph").text();
 		price = els.select("label.price").text();

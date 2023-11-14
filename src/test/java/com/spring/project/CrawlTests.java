@@ -78,7 +78,7 @@ public static void main(String[] args) throws Exception{
 				while ((bytesRead = bis.read(buffer)) != -1) {
                     bos.write(buffer, 0, bytesRead);
                 }
-                
+                 
                 bos.close(); // 파일 닫기
                 bis.close(); // 스트림 닫기   
                 
