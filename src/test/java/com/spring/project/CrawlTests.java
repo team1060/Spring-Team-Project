@@ -4,6 +4,7 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
@@ -57,9 +58,9 @@ public static void main(String[] args) throws Exception{
 			if(!listDir.exists()){
 				listDir.mkdir();
 			}
-			System.out.println(dataIndex);
+			System.out.println("dataIndex" + dataIndex);
 			URL realUrl = new URL(url);
-			System.out.println(realUrl);
+			System.out.println("realUrl" +realUrl);
 			try {
 				int bufferSize = 1024 * 1024; 
 				byte[] buffer = new byte[bufferSize];
@@ -72,17 +73,25 @@ public static void main(String[] args) throws Exception{
                      continue; // 다음 이미지 다운로드를 시도
 				}
 				
-				BufferedInputStream bis = new BufferedInputStream(httpURLConnection.getInputStream());
-				BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(new File("c:/upload")));
+				try {
+					
+					BufferedInputStream bis = new BufferedInputStream(httpURLConnection.getInputStream());
+					BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(new File("c:/upload")));
+					System.out.println("11111");
+
+					while ((bytesRead = bis.read(buffer)) != -1) {
+						System.out.println("2222");
+						bos.write(buffer, 0, bytesRead);
+					}
+					System.out.println("3333");
+					bos.close(); // 파일 닫기
+					bis.close(); // 스트림 닫기   
+					
+					System.out.println("파일 다운로드");
+				} catch (IOException e) {
+					System.out.println("forbiden");
+				}
 				
-				while ((bytesRead = bis.read(buffer)) != -1) {
-                    bos.write(buffer, 0, bytesRead);
-                }
-                 
-                bos.close(); // 파일 닫기
-                bis.close(); // 스트림 닫기   
-                
-                System.out.println("파일 다운로드");
 				
 			} catch (Exception e) {
 				e.printStackTrace();
