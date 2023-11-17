@@ -1,9 +1,7 @@
-package com.spring.project.controller.admin.adminSupport;
+package com.spring.project.controller.admin;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import com.spring.project.controller.admin.Admin;
 
 @Controller
 @RequestMapping("/support")
