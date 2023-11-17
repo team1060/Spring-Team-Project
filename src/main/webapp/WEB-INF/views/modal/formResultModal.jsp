@@ -7,8 +7,10 @@
 </head>
 <body>
 <script>
-   var message = `<c:out value="${message}" />`;
-   alert(message);
+var message = "${message}";
+if (message) {
+    alert(message);
+}
 </script>
 </body>
 </html>

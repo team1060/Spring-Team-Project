@@ -4,12 +4,12 @@ import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.spring.project.domain.SupportVO;
 import com.spring.project.service.SupportService;
@@ -24,18 +24,16 @@ public class Support {
 	
 	// 고객 문의
 	@GetMapping("question")
-	public String question() {
-		
-		return "question";
+	public void showQuestionPage() {
 		
 	}
 	
-//	@PostMapping("question")
-//	public String processQuestionForm(@RequestParam("questionSelect") String questionSelect, @ModelAttribute SupportVO customerSupportVO, Model model) throws IOException {
-//		customerSupportService.addQuestion(customerSupportVO);
-//		model.addAttribute("message", "질문이 성공적으로 등록되었습니다.");
-//		return "redirect:/modal/formResultModal";
-//	}
+	@PostMapping("question")
+	public String processQuestionForm(@RequestParam("questionSelect") String questionSelect, @ModelAttribute SupportVO customerSupportVO, RedirectAttributes redirectAttributes) throws IOException {
+		customerSupportService.addQuestion(customerSupportVO);
+		redirectAttributes.addFlashAttribute("message", "질문이 성공적으로 등록되었습니다.");
+	    return "redirect:/";
+	}
 	
 	
 	// FAQ, 자주 묻는 질문

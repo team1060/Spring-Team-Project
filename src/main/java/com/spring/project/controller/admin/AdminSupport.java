@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/support")
+@RequestMapping("/support1")
 public class AdminSupport extends Admin {
 
 	@Override
