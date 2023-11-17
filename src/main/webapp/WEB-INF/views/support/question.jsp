@@ -156,10 +156,10 @@
                         <div class="col-9 ">
                             <select name="questionSelect" id="questionSelect" class="form-control">
                                 <option value="선택하세요">직접 입력</option>
-                                <option value="문의">문의</option>
-                                <option value="불만">불만</option>
-                                <option value="제안(건의) - 아이디어">제안(건의) - 아이디어</option>
-                                <option value="기타">기타</option>
+                                <option value="1">문의</option>
+                                <option value="2">불만</option>
+                                <option value="3">제안(건의) - 아이디어</option>
+                                <option value="4">기타</option>
                             </select>
                         </div>
                     </div>

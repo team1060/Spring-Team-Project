@@ -12,15 +12,16 @@ java {
 	sourceCompatibility = '17'
 }
 
-eclipse.wtp.facet {
-    // Change the version of the Dynamic Web Module facet
-    facet name: 'jst.web', version: '5.0'
-}
-
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
+}
+
+
+eclipse.wtp.facet {
+    // Change the version of the Dynamic Web Module facet
+    facet name: 'jst.web', version: '5.0'
 }
 
 repositories {
@@ -41,10 +42,18 @@ dependencies {
 	implementation 'jakarta.servlet:jakarta.servlet-api'
     implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
     implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
-    implementation 'org.ap	ache.tomcat.embed:tomcat-embed-jasper'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
     
-    //jsoup 의존성 추가
+    // jsoup 의존성 추가
 	implementation 'org.jsoup:jsoup:1.15.3'
+	
+    // JUnit 5 추가
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Log4j
+    implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
 }
 
 tasks.named('bootBuildImage') {
@@ -52,5 +61,5 @@ tasks.named('bootBuildImage') {
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }

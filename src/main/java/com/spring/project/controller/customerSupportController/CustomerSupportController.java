@@ -38,10 +38,22 @@ public class CustomerSupportController {
 		String phonenumber = phone1 + "-" + phone2 + "-" + phone3;
 		String email = request.getParameter("email");
 		String content = request.getParameter("content");
-		
+		String questionSelectParam = request.getParameter("questionSelect");
+		Long qcno = Long.parseLong(questionSelectParam);
+		System.out.println(title);
+		System.out.println(writer);
+		System.out.println(addr);
+		System.out.println(phone1);
+		System.out.println(phone2);
+		System.out.println(phone3);
+		System.out.println(phonenumber);
+		System.out.println(email);
+		System.out.println(content);
+		System.out.println(questionSelectParam);
+		System.out.println(qcno);
 		CustomerSupportVO customerSupportVO = CustomerSupportVO.builder()
 				.title(title).writer(writer).addr(addr)
-				.phonenumber(phonenumber).email(email).content(content)
+				.phonenumber(phonenumber).email(email).content(content).qcno(qcno)
 				.build();
 		System.out.println(customerSupportVO);
 		customerSupportService.addQuestion(customerSupportVO);
