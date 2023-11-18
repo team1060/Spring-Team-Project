@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class SupportService {
 	private static SupportService customerSupportService = new SupportService();
+	
 	public static SupportService getCustomerSupportService() {
 		return customerSupportService;
 	}

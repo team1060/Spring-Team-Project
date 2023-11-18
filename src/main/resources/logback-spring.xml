@@ -6,7 +6,7 @@
         </encoder>
     </appender>
 
-    <logger name="com.study.springboot" level="debug"/>
+    <logger name="com.spring.project" level="info"/>
 
 	<!-- log4j2-jdbc4 -->
     <logger name="jdbc" level="OFF" />
