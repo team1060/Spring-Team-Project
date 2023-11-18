@@ -107,7 +107,7 @@
                         <div class="col-sm-10">
                             <input type="text" name="name"
                                 class="form-control border-bottom-0 border-right-0 border-left-0 border-top-0" id="name"
-                                placeholder="">
+                                placeholder="" required>
                             <hr class="line">
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                         <div class="col-sm-10">
                             <input type="tel" name="tel"
                                 class="form-control border-bottom-0 border-right-0 border-left-0 border-top-0"
-                                placeholder="- 빼고 입력해주세요" id="tel">
+                                placeholder="- 빼고 입력해주세요" id="tel" required>
                             <hr class="line">
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                         <div class="col-sm-8">
                             <input type="addr" name="addr"
                                 class="col-sm-8 form-control border-bottom-0 border-right-0 border-left-0 border-top-0"
-                                placeholder="" id="addr">
+                                placeholder="" id="addr" required>
 
                             <hr class="line">
                         </div>
@@ -140,7 +140,7 @@
                         <div class="col-sm-10">
                             <input type="id" name="id"
                                 class="form-control border-bottom-0 border-right-0 border-left-0 border-top-0"
-                                placeholder="6 ~ 12 글자의 영문 + 숫자 조합으로 입력 가능" id="id">
+                                placeholder="6 ~ 12 글자의 영문 + 숫자 조합으로 입력 가능" id="id" required>
                             <hr class="line">
                         </div>
                     </div>
@@ -150,7 +150,7 @@
                         <div class="col-sm-10">
                             <input type="password" name="pw"
                                 class="form-control border-bottom-0 border-right-0 border-left-0 border-top-0"
-                                placeholder="영문, 숫자, 특수문자 3가지 종류 이상 조합 10 ~ 15자로 사용 가능" id="pw">
+                                placeholder="영문, 숫자, 특수문자 3가지 종류 이상 조합 10 ~ 15자로 사용 가능" id="pw" required>
                             <hr class="line">
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                         <div class="col-sm-10">
                             <input type="password" name="pwch"
                                 class="form-control border-bottom-0 border-right-0 border-left-0 border-top-0"
-                                placeholder="영문, 숫자, 특수문자 3가지 종류 이상 조합 10 ~ 15자로 사용 가능" id="pw">
+                                placeholder="영문, 숫자, 특수문자 3가지 종류 이상 조합 10 ~ 15자로 사용 가능" id="pw" required>
                             <hr class="line">
                         </div>
                     </div>
@@ -172,7 +172,7 @@
                         <div class="col-sm-8">
                             <input type="email" name="email"
                                 class="col-sm-8 form-control border-bottom-0 border-right-0 border-left-0 border-top-0"
-                                placeholder="" id="email">
+                                placeholder="" id="email" required>
 
                             <hr class="line">
                         </div>
