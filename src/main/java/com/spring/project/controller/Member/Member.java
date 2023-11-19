@@ -3,6 +3,7 @@ package com.spring.project.controller.Member;
 import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,8 @@ public class Member {
 	
 	@Autowired
 	private MemberService service = MemberService.getInstance();
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 	
 	@GetMapping("/member/join")
 	public void join() {
@@ -37,7 +40,9 @@ public class Member {
 	
 	@PostMapping("/member/signup")
 	public void signup(MemberVO vo, HttpServletResponse resp) throws IOException {
-		//log.info("회원가입시도");
+		
+		vo.encodePassword(passwordEncoder);
+		
 		if(service.register(vo) > 0) {
 			log.info("회원가입완료");
 			WebUtils.alert(resp, "회원가입을 축하합니다!", "/");

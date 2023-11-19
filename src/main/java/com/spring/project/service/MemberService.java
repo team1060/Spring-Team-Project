@@ -14,6 +14,7 @@ public class MemberService {
 	@Autowired
 	private MemberMapper mapper;
 	
+	
 	private static MemberService instance = new MemberService();
 	public static MemberService getInstance() {
 		return instance;
@@ -21,7 +22,7 @@ public class MemberService {
 	
 	
 	public int register(MemberVO vo) {
-		//vo.setPw();
+		
 		return mapper.insert(vo);
 	}
 	

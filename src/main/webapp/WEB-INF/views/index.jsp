@@ -38,7 +38,8 @@
 </button>
 <a href="logout">로그아웃</a>
 ${member}
-
+	
+	<form method="post">
 <div class="modal fade" id="myModal">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -75,7 +76,7 @@ ${member}
 
             <!-- Modal footer -->
             <div class="modal-footer">
-                <button type="button" class="btn btn-info loginbtn">로그인</button>
+                <button type="submit" class="btn btn-info loginbtn">로그인</button>
             </div>
             <div class="join row justify-content-center">
                 <p>계정이 없으신가요? </p>
@@ -87,6 +88,7 @@ ${member}
         </div>
     </div>
 </div>
+</form>
 
 <body>
 
