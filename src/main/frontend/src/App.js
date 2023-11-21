@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import "./assets/css/style.scss";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import FaqComponent from './components/FaqComponent';
 
 function App() {
